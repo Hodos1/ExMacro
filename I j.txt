@@ -1,0 +1,15 @@
+Sub CompareText()
+
+Dim i As Long
+Dim j As Long
+
+For i = 1 To Cells(Rows.Count, "A").End(xlUp).Row
+    For j = 1 To Cells(Rows.Count, "C").End(xlUp).Row
+        If Cells(i, "A").Value = Cells(j, "C").Value Then
+            Cells(i, "A").Interior.ColorIndex = 6
+            Cells(j, "C").Interior.ColorIndex = 6
+        End If
+    Next j
+Next i
+
+End Sub
